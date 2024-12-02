@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-investments-results',
@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './investments-results.component.css'
 })
 export class InvestmentsResultsComponent {
-
+  @Input() result?: {
+    year: number;
+    interest: number;
+    valueEndOfYear: number;
+    annualInvestment: number;
+    totalInterest: number;
+    totalAmountInvested: number;
+  }[];
 }
